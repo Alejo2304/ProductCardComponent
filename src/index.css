@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* --- Colores --- */
+
+  /* Primarios */
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-green-700: hsl(158, 42%, 18%);
+
+  /* Neutrales */
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* --- Fuentes --- */
+
+  /* Para la tipografía principal (Body Copy) */
+  --font-body: "Montserrat", sans-serif;
+  --font-size-body: 14px;
+
+  /* Para títulos o elementos que requieran la fuente Fraunces */
+  --font-headings: "Fraunces", serif;
+
+}
+
