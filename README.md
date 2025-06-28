@@ -28,15 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop Design](./src/assets/screenshots/Desktop.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Mobile Design](./src/assets/screenshots/Mobile.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -48,57 +43,77 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vite.dev/)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This is my first time working with REACT+TailwindCSS, so at the beggining I needed to change my mindset to start thinking on "components" that I may reuse on the future or that lead to enhance escalability in the future. 
 
-To see how you can add code snippets, see below:
+I also learned that on the v4.1 of TailwindCSS a lot of the settings changed, as for example, the @tailwind directives were removed and know you only use @import "tailwindcss"; on your CSS file.  
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+To add custom themes is no longer needed ot have a "tailwind.config.js" file, you can do it using @theme on the CSS. 
+
+Some of the code I'm proud (even knowing I can do better in the future) of:
+
+```JS+React:
+export default function App() {
+  return (
+    <div className="flex justify-center items-center min-h-screen min-w-screen bg-cream">
+      <div className="w-[90vw] max-h-[95vh] px-5 md:max-w-[30vw] md:max-h-[60vh]">
+        <ProductCard 
+        pType='PERFUME'
+        pName='Gabrielle Essence Eau De Parfum'
+        pDescription='A floral, solar and voulptuos interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANNEL'
+        pNewPrice='149.99'
+        pOldPrice='169.99' 
+        pImageMobile={productImageMobile}
+        pImageDesktop={productImageDesktop}
+        />
+      </div>
+    </div>
+  );
+}
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+@theme {
+  /* --- Colores --- */
+
+  /* Primarios */
+  --color-green-500: hsl(158, 36%, 37%);
+  --color-green-700: hsl(158, 42%, 18%);
+
+  /* Neutrales */
+  --color-black: hsl(212, 21%, 14%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* --- Fuentes --- */
+
+  /* Para la tipografía principal (Body Copy) */
+  --font-body: "Montserrat", sans-serif;
+  --font-size-body: 14px;
+
+  /* Para títulos o elementos que requieran la fuente Fraunces */
+  --font-headings: "Fraunces", serif;
+
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to refine my abilities on TailwindCSS as I found it very useful, also I believe it helps to mantain a clean and scalable code.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [TailwindCSS docs - Adding custom Styles](https://tailwindcss.com/docs/adding-custom-styles) - This helped me with the changes on the new version v4.1 on TailwindCSS, as there were big changes from v3 to v4. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Alejandro Ojeda](https://alejo2304.github.io/)
+- Frontend Mentor - [@Alejo2304](https://www.frontendmentor.io/profile/Alejo2304)
