@@ -44,7 +44,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
-- CSS Grid
 - [React](https://reactjs.org/) - JS library
 - [TailwindCSS](https://tailwindcss.com/)
 - [Vite](https://vite.dev/)
