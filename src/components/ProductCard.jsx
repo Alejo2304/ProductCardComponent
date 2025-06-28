@@ -2,7 +2,7 @@ import cartIcon from '../assets/icon-cart.svg';
 
 function ProductImage({pMobileImage, pDesktopImage, altText}){
     return(    
-        <div className="md:w-full md:h-full">
+        <div className="flex md:w-full md:h-full">
         {/* Imagen para móviles: visible por defecto, oculta en md y superior */}
         <img
             src={pMobileImage}
@@ -21,13 +21,13 @@ function ProductImage({pMobileImage, pDesktopImage, altText}){
 
 function ProductDetails({productType, productName, productDescription}){
     return (
-        <div className="flex-col px-5" >
+        <div className="flex flex-col flex-grow px-4 pt-4 md:px-6 md:pt-6 flex-grow" >
             <header>
-                <p className="text-grey text-md  tracking-wider">{productType}</p>
+                <p className="text-grey text-md  tracking-wider uppercase">{productType}</p>
                 <h1 className="text-black font-headings text-3xl py-3">{productName}</h1>
             </header>
-            <section>
-                <p className="text-grey font-body text-sm">{productDescription}</p>
+            <section className="mt-2">
+                <p className="text-grey font-body text-sm leding-relaxed">{productDescription}</p>
             </section>
         </div>
     );
@@ -50,7 +50,7 @@ function Price({newPrice, oldPrice}){
 function AddToCartButton({iconPath}){
     return (
         <div className="flex-col justify-center items-center">
-            <button className="bg-green-500 text-white  text-xs font-bold py-3 px-18 rounded inline-flex items-center justify-center space-x-2">
+            <button className="bg-green-500 hover:bg-green-700 cursor-pointer text-white  text-xs font-bold py-3 px-20 rounded inline-flex items-center justify-center space-x-2">
                         <img src={iconPath} alt="Cart Icon" className="w-3 h-3"></img>
                         <p> Add to Cart </p>
             </button>
@@ -61,11 +61,11 @@ function AddToCartButton({iconPath}){
 
 export default function ProductCard({pType, pName, pDescription, pNewPrice, pOldPrice, pImageMobile, pImageDesktop}){
     return(
-        <article className="flex md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className = 'flex-1/2 border'>
+        <article className="flex flex-col w-full h-full md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className = 'md:w-1/2'>
                 <ProductImage pMobileImage={pImageMobile} pDesktopImage={pImageDesktop} altText={pName} />
             </div>
-            <div className='flex flex-1/2 flex-col justify-center items-center border py-2'>
+            <div className='flex flex-col justify-center items-center  py-2 md:w-1/2'>
                 <ProductDetails productType={pType} productName={pName} productDescription={pDescription} />
                 <Price newPrice={pNewPrice} oldPrice={pOldPrice} />
                 <AddToCartButton iconPath={cartIcon} />

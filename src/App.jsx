@@ -5,7 +5,7 @@ import productImageMobile from './assets/image-product-mobile.jpg'
 export default function App() {
   return (
     <div className="flex justify-center items-center min-h-screen min-w-screen bg-cream">
-      <div className="max-w-[30vw] max-h-[60vh]">
+      <div className="w-[90vw] max-h-[95vh] px-5 md:max-w-[30vw] md:max-h-[60vh]">
         <ProductCard 
         pType='PERFUME'
         pName='Gabrielle Essence Eau De Parfum'
