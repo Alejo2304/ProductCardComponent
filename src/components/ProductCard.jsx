@@ -21,7 +21,7 @@ function ProductImage({pMobileImage, pDesktopImage, altText}){
 
 function ProductDetails({productType, productName, productDescription}){
     return (
-        <div className="flex flex-col flex-grow px-4 pt-4 md:px-6 md:pt-6 flex-grow" >
+        <div className="flex flex-col flex-grow px-4 pt-4 md:px-6 md:pt-6" >
             <header>
                 <p className="text-grey text-md  tracking-wider uppercase">{productType}</p>
                 <h1 className="text-black font-headings text-3xl py-3">{productName}</h1>
@@ -35,13 +35,13 @@ function ProductDetails({productType, productName, productDescription}){
 
 function Price({newPrice, oldPrice}){
     return(
-        <div className="inline-flex flex-nowrap py-4 px-15 items-center justify-center space-x-5">
+        <div className="inline-flex flex-nowrap py-4 px-15 items-center justify-center space-x-5" type="button">
             <h1 className="text-green-500 font-headings text-3xl flex-2/3">
                 ${newPrice}
             </h1>
-            <h3 className="text-grey line-through text-xs flex-1/3">
+            <h2 className="text-grey line-through text-xs flex-1/3">
                 ${oldPrice}
-            </h3>
+            </h2>
         </div>
     );
 }
@@ -52,7 +52,7 @@ function AddToCartButton({iconPath}){
         <div className="flex-col justify-center items-center">
             <button className="bg-green-500 hover:bg-green-700 cursor-pointer text-white  text-xs font-bold py-3 px-20 rounded inline-flex items-center justify-center space-x-2">
                         <img src={iconPath} alt="Cart Icon" className="w-3 h-3"></img>
-                        <p> Add to Cart </p>
+                        <span> Add to Cart </span>
             </button>
         </div>
     );
